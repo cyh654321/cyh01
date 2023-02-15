@@ -77,11 +77,11 @@
        
       </div> 
       <div class="flex1">
-        <div class="daohang">导航</div>
-        <div class="daohang">导航</div>
-        <div class="daohang">导航</div>
-        <div class="daohang">导航</div>
-        <div class="daohang">导航</div>
+        <div onclick="jump('daohang1')" class="daohang">常用网站</div>
+        <div onclick="jump('daohang2')" class="daohang">导航</div>
+        <div onclick="jump('daohang3')" class="daohang">导航</div>
+        <div onclick="jump('daohang4')" class="daohang">导航</div>
+        <div onclick="jump('daohang5')" class="daohang">导航</div>
       </div>
     </div> 
     <div class="flex1 flex column">
@@ -97,13 +97,13 @@
             <div style="height: 100px;" class="shujukuai flex1 baise yinying " ></div>
           </div>
           <div class="flex column">
-            <div style="height: 160px;" class="baise mgt8 yinying">
+            <div id="daohang1" style="height: 160px;" class="baise mgt8 yinying">
               <a href='https://cyh654321.github.io/cyh01/dianming.html'>点名网站</a>
             </div>
-            <div style="height: 160px;" class="baise mgt8 yinying"></div>
-            <div style="height: 160px;" class="baise mgt8 yinying"></div>
-            <div style="height: 160px;" class="baise mgt8 yinying"></div>
-            <div style="height: 160px;" class="baise mgt8 yinying"></div>
+            <div id="daohang2" style="height: 160px;" class="baise mgt8 yinying"></div>
+            <div id="daohang3" style="height: 160px;" class="baise mgt8 yinying"></div>
+            <div id="daohang4" style="height: 160px;" class="baise mgt8 yinying"></div>
+            <div id="daohang5" style="height: 160px;" class="baise mgt8 yinying"></div>
           </div>
         </div>
       
@@ -120,3 +120,8 @@
     </div>
   </body>
 </html>
+<script>
+  function jump(id) {
+      document.querySelector('#'+ id).scrollIntoView({behavior: "smooth"})
+  }
+</script>
