@@ -41,6 +41,9 @@
       font-size: 14px;
       color:#666;
     }
+    .youbian{
+      display: none;
+    }
     @media (max-width:600px) {
       .cebian{
         display: none;
@@ -61,11 +64,14 @@
       .neirong::-webkit-scrollbar{
         display: none;
       }
+      .youbian{
+        display: block;
+      }
     }
   </style>
   </head>
-  <body class="flex"> 
-    <div style="width:200px;z-index: 2;" class="cebian baise yinying">
+  <body class="flex" id="body"onresize="reize()" onclick="quanping()" quanbu> 
+    <div style="width:200px;z-index: 2;" id="dianji"class="cebian baise yinying">
       <div style="padding: 10px; align-items: center; justify-content: center;border-bottom: 1px solid #999;"class="flex">
         <img
           src="https://kangwenchang.com/logo.png"
@@ -82,6 +88,7 @@
         <div onclick="jump('daohang3')" class="daohang">导航</div>
         <div onclick="jump('daohang4')" class="daohang">导航</div>
         <div onclick="jump('daohang5')" class="daohang">导航</div>
+        <div onclick="jump('youce')" class="daohang youbian">提示和消息</div>
       </div>
     </div> 
     <div class="flex1 flex column">
@@ -107,7 +114,7 @@
           </div>
         </div>
       
-        <div style="flex:1"class="youqu flex column mgr8 mgt8">
+        <div style="flex:1"id="youce"class="youqu flex column mgr8 mgt8">
           <div style="height: 150px;" class="baise yinying">
 
           </div>
@@ -121,7 +128,23 @@
   </body>
 </html>
 <script>
+  let x=window.innerWidth;
+  function reize() {
+    if(x!=window.innerWidth)
+    location.reload();
+  }
   function jump(id) {
       document.querySelector('#'+ id).scrollIntoView({behavior: "smooth"})
+  }
+  
+  let topw=document.getElementById("dianji")
+  screenW=document.body.offsetWidth;
+  function quanping()
+  {
+    if(screenW<600)
+        if(topw.style.display=="none")
+        topw.style.display="block"
+        else
+        topw.style.display="none"
   }
 </script>
