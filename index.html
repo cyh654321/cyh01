@@ -41,6 +41,11 @@
       font-size: 14px;
       color:#666;
     }
+    .daohang1{
+      padding: 5px;
+      font-size: 14px;
+      color:#666;
+    }
     .youbian{
       display: none;
     }
@@ -64,87 +69,112 @@
       .neirong::-webkit-scrollbar{
         display: none;
       }
-      .youbian{
+      .xianmian{
         display: block;
       }
     }
   </style>
   </head>
-  <body class="flex" id="body"onresize="reize()" onclick="quanping()" quanbu> 
-    <div style="width:200px;z-index: 2;" id="dianji"class="cebian baise yinying">
-      <div style="padding: 10px; align-items: center; justify-content: center;border-bottom: 1px solid #999;"class="flex">
-        <img
-          src="https://kangwenchang.com/logo.png"
-          width="40px"
-          heighr="40px"
-          alt=""
-        />
-        <div style="margin-left: 10px;">陈奕涵</div>
-       
+  <body class="flex column"> 
+    <div style="overflow: auto"class="flex">
+      <div style="width:200px;z-index: 2;" id="dianji"class="cebian baise yinying">
+        <div style="padding: 10px; align-items: center; justify-content: center;border-bottom: 1px solid #999;"class="flex">
+          <img
+            src="https://cyh654321.github.io/cyh01/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20230212123414.jpg"
+            width="40px"
+            heighr="40px"
+            alt=""
+          />
+          <div style="margin-left: 10px;">陈奕涵</div>
+        
+        </div> 
+        <div class="flex1">
+          <div onclick="jump('daohang1')" class="daohang">常用网站</div>
+          <div onclick="jump('daohang2')" class="daohang">导航</div>
+          <div onclick="jump('daohang3')" class="daohang">导航</div>
+          <div onclick="jump('daohang4')" class="daohang">导航</div>
+          <div onclick="jump('daohang5')" class="daohang">导航</div>
+        </div>
       </div> 
-      <div class="flex1">
-        <div onclick="jump('daohang1')" class="daohang">常用网站</div>
-        <div onclick="jump('daohang2')" class="daohang">导航</div>
-        <div onclick="jump('daohang3')" class="daohang">导航</div>
-        <div onclick="jump('daohang4')" class="daohang">导航</div>
-        <div onclick="jump('daohang5')" class="daohang">导航</div>
-        <div onclick="jump('youce')" class="daohang youbian">提示和消息</div>
-      </div>
-    </div> 
-    <div class="flex1 flex column">
-      <div style="height:60px;z-index: 1;" class="baise yinying">
-
-      </div>
-      <div style="overflow: auto"class="neirong flex1 flex ">
-        <div style="flex:3" class="flex column mg8">
-          <div class="flex shuju">
-            <div style="height: 100px;" class="shujukuai flex1 baise mgr8 yinying" ></div>
-            <div style="height: 100px;" class="shujukuai flex1 baise mgr8 yinying" ></div>
-            <div style="height: 100px;" class="shujukuai flex1 baise mgr8 yinying" ></div>
-            <div style="height: 100px;" class="shujukuai flex1 baise yinying " ></div>
-          </div>
-          <div class="flex column">
-            <div id="daohang1" style="height: 160px;" class="baise mgt8 yinying">
-              <a href='https://cyh654321.github.io/cyh01/dianming.html'>点名网站</a>
+      <div class="flex1 flex column">
+        <div style="
+        height:90px;
+        padding-left: 10px;
+        padding-right: 10px;
+        z-index: 1;
+        " class="baise yinying">
+          <p style="color:#666;margin: 10px auto;">正是我们每天反复做的事情，最终造就了我们，优秀不是一种行为，而是一种习惯</p>
+        </div>
+        <div style="overflow: auto"class="neirong flex1 flex ">
+          <div style="flex:3" class="flex column mg8">
+            <div class="flex shuju">
+              <div style="height: 100px;"  class="shujukuai flex1 baise mgr8 yinying" ></div>
+              <div style="height: 100px;" class="shujukuai flex1 baise mgr8 yinying" ></div>
+              <div style="height: 100px;" class="shujukuai flex1 baise mgr8 yinying" ></div>
+              <div style="height: 100px;" class="shujukuai flex1 baise yinying " ></div>
             </div>
-            <div id="daohang2" style="height: 160px;" class="baise mgt8 yinying"></div>
-            <div id="daohang3" style="height: 160px;" class="baise mgt8 yinying"></div>
-            <div id="daohang4" style="height: 160px;" class="baise mgt8 yinying"></div>
-            <div id="daohang5" style="height: 160px;" class="baise mgt8 yinying"></div>
+            <div class="flex column">
+              <div id="daohang1" style="height: 160px;" class="baise mgt8 yinying">
+                <a href='https://cyh654321.github.io/cyh01/dianming.html'>点名网站</a>
+              </div>
+              <div id="daohang2" style="height: 160px;" class="baise mgt8 yinying"></div>
+              <div id="daohang3" style="height: 160px;" class="baise mgt8 yinying"></div>
+              <div id="daohang4" style="height: 160px;" class="baise mgt8 yinying"></div>
+              <div id="daohang5" style="height: 160px;" class="baise mgt8 yinying"></div>
+            </div>
           </div>
-        </div>
-      
-        <div style="flex:1"id="youce"class="youqu flex column mgr8 mgt8">
-          <div style="height: 150px;" class="baise yinying">
+        
+          <div style="flex:1"id="youce"class="youqu flex column mgr8 mgt8">
+            <div style="height: 150px;" class="baise yinying">
 
+            </div>
+            <div style="height: 300px;" class="baise mgt8 yinying">
+              
+            </div>
           </div>
-          <div style="height: 300px;" class="baise mgt8 yinying">
-            
-          </div>
-        </div>
 
+        </div>
+      </div>
+    </div>
+    <div class="youbian xianmian">
+      <div class="flex baise ">
+        <div onclick="jump('daohang1')" class="daohang1">常用网站</div>
+        <div onclick="jump('daohang2')" class="daohang1">导航</div>
+        <div onclick="jump('daohang3')" class="daohang1">导航</div>
+      </div>
+      <div class="flex baise ">
+        <div onclick="jump('daohang4')" class="daohang1">导航</div>
+        <div onclick="jump('daohang5')" class="daohang1">导航</div>
+        <div onclick="jump('youce')" class="daohang1">提示和消息</div>
       </div>
     </div>
   </body>
 </html>
 <script>
-  let x=window.innerWidth;
-  function reize() {
-    if(x!=window.innerWidth)
-    location.reload();
-  }
   function jump(id) {
       document.querySelector('#'+ id).scrollIntoView({behavior: "smooth"})
   }
-  
-  let topw=document.getElementById("dianji")
-  screenW=document.body.offsetWidth;
-  function quanping()
-  {
-    if(screenW<600)
-        if(topw.style.display=="none")
-        topw.style.display="block"
-        else
-        topw.style.display="none"
-  }
+  let flag = true;
+    function setRem() {
+        if (flag) {
+            flag = false;
+            let ui_w =275;
+            let ui_nw=400;
+            let ui_mw=590;
+            // 获取屏幕的宽度
+            let clientWidth = document.documentElement.clientWidth || document.body.clientWidth;
+            clientWidth=Math.max(ui_nw, clientWidth);
+            clientWidth=Math.min(ui_mw, clientWidth);
+            // 通过js动态改变html根节点字体大小
+            let html_ = document.getElementsByTagName('html')[0];
+            html_.style.fontSize = (clientWidth / ui_w) * 10 + 'px';
+            setTimeout(function () {
+                flag = true;
+            }, 70)
+        }
+    }
+    // window.onresize 浏览器被重置大小执行事件
+    window.onresize = setRem;
+// 当页面加载完成调用
+window.onload = setRem;
 </script>
